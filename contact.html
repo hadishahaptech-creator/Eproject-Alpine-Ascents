@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Alpine Ascents team.">
+    <title>Contact Us | Alpine Ascents</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 Grid (rows and columns for the layout; loaded first so our own CSS keeps the design) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+
+    <!-- Stylesheet for this page -->    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- ========== PRELOADER (logo screen when the page opens) ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img class="preloader-logo" src="aa-logo.svg" alt="Alpine Ascents">
+            <p class="preloader-name">ALPINE <span>ASCENTS</span></p>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+    <!-- copper bar at the top that shows how far you have scrolled -->
+    <div class="scroll-bar" id="scrollBar"></div>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="aa-logo.svg" alt="Alpine Ascents logo" class="logo-img" title="Click to view the logo" style="cursor: pointer;" onerror="this.style.display='none'">
+                <span class="logo-text">ALPINE <span>ASCENTS</span></span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-box">
+
+                <!-- Left side: contact information -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about mountaineering? Feel free to contact our team. We will be happy to hear from you.</p>
+
+                    <!-- demo contact details (replace with real ones if needed) -->
+                    <div class="info-item">
+                        <span class="icon">&#9993;</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>alpineascents@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="icon">&#9742;</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 300 1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="icon">&#9873;</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Mall Road, Lahore, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="icon">&#9200;</span>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon &ndash; Sat: 9:00 AM &ndash; 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: contact form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+
+                    <!-- novalidate: our own error messages (script.js) show instead of the browser's -->
+                    <form id="contactForm" novalidate>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" aria-describedby="nameError">
+                        <p class="field-error" id="nameError" aria-live="polite"></p>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email address" aria-describedby="emailError">
+                        <p class="field-error" id="emailError" aria-live="polite"></p>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Enter the subject" aria-describedby="subjectError">
+                        <p class="field-error" id="subjectError" aria-live="polite"></p>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="4" placeholder="Write your message here" aria-describedby="messageError"></textarea>
+                        <p class="field-error" id="messageError" aria-live="polite"></p>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ BUTTON (opens the separate FAQ page) ========== -->
+    <section class="faq-cta">
+        <div class="container">
+            <div class="faq-cta-box">
+                <div class="faq-cta-text">
+                    <p class="faq-small-heading">GOT QUESTIONS?</p>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find quick answers about mountaineering, climbing gear, safety and mountain expeditions on our FAQ page.</p>
+                </div>
+                <a href="faq.html" class="btn faq-cta-btn">View FAQs <span class="faq-cta-arrow">&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <h3>ALPINE <span>ASCENTS</span></h3>
+                <p>An academic website about mountaineering, famous peaks, climbing skills and mountain safety.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Alpine Ascents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== DARK / LIGHT MODE SWITCH (with a hint bubble above it) ========== -->
+    <div class="theme-wrap" id="themeWrap">
+        <div class="theme-tip" id="themeTip" role="status">
+            <span class="theme-tip-dot"></span>
+            <span id="themeTipText">Try dark mode &#127769;</span>
+            <button class="theme-tip-close" id="themeTipClose" type="button" aria-label="Hide this tip">&times;</button>
+        </div>
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <span class="toggle-stars"></span>
+            <span class="toggle-cloud"></span>
+            <span class="toggle-knob"></span>
+        </button>
+    </div>
+
+    <!-- ========== LOGO POPUP (opens when the logo is clicked) ========== -->
+    <div class="logo-popup" id="logoPopup">
+        <span class="logo-close" id="logoClose">&times;</span>
+        <div class="logo-stage">
+            <span class="logo-ring"></span>
+            <span class="logo-ring ring2"></span>
+            <span class="logo-ring ring3"></span>
+            <img id="logoBig" class="logo-big" src="aa-logo.svg" alt="Alpine Ascents logo">
+            <p class="logo-name">ALPINE <span>ASCENTS</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
