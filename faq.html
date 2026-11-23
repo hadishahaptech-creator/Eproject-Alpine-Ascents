@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about mountaineering, gear, safety and expeditions - Alpine Ascents.">
+    <title>FAQ | Alpine Ascents</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 Grid (rows and columns for the layout; loaded first so our own CSS keeps the design) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+
+    <!-- Stylesheet for this page -->    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+    <!-- ========== PRELOADER (logo screen when the page opens) ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img class="preloader-logo" src="aa-logo.svg" alt="Alpine Ascents">
+            <p class="preloader-name">ALPINE <span>ASCENTS</span></p>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+    <!-- copper bar at the top that shows how far you have scrolled -->
+    <div class="scroll-bar" id="scrollBar"></div>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="aa-logo.svg" alt="Alpine Ascents logo" class="logo-img" title="Click to view the logo" style="cursor: pointer;" onerror="this.style.display='none'">
+                <span class="logo-text">ALPINE <span>ASCENTS</span></span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== BANNER ========== -->
+    <section class="page-banner faq-banner">
+        <!-- falling snow (snowflakes are added by script.js) -->
+        <div class="banner-snow" id="bannerSnow"></div>
+
+        <div class="page-banner-content">
+            <p class="faq-badge"><span class="faq-badge-dot"></span> HELP CENTER</p>
+            <!-- the letters of this heading are split up by script.js so they can drop in one by one -->
+            <h1 class="split-title">Frequently Asked Questions</h1>
+            <p class="faq-banner-text">Everything you wanted to know about mountaineering, climbing gear, safety and expeditions.</p>
+            <p class="faq-crumbs">
+                <a href="contact.html">Contact Us</a>
+                <span>&rsaquo;</span>
+                FAQ
+            </p>
+        </div>
+
+        <!-- little mouse that tells the visitor to scroll down -->
+        <span class="scroll-hint" aria-hidden="true"><span></span></span>
+    </section>
+
+    <!-- ========== QUESTIONS ========== -->
+    <section class="faq-page">
+        <div class="container faq-wrap">
+
+            <!-- search box + how many questions are showing -->
+            <div class="faq-tools">
+                <label class="faq-search">
+                    <svg class="faq-search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                    <input type="search" id="faqSearch" placeholder="Search a question... e.g. gear, safety, Everest" aria-label="Search the questions">
+                </label>
+                <p class="faq-count">Showing <strong id="faqCount">10</strong> of 10 questions</p>
+            </div>
+
+            <!-- the questions (click one to open its answer) -->
+            <div class="faq-list" id="faqList">
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">01</span>
+                        <span class="faq-q-text">What is mountaineering?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Mountaineering is the activity of climbing mountains, usually to reach the summit. It
+                            combines hiking, rock climbing and climbing on snow and ice, and it often takes several
+                            days in remote places where weather and altitude make it challenging.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">02</span>
+                        <span class="faq-q-text">What equipment is essential for beginners?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Beginners need sturdy waterproof boots, warm layered clothing, a waterproof jacket,
+                            a backpack, a helmet, gloves, sunglasses and sunscreen, a map and compass or GPS, a
+                            headlamp, a first-aid kit, plus enough food and water. On snow and ice you also need
+                            crampons, an ice axe, a harness and rope.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">03</span>
+                        <span class="faq-q-text">What are the different types of mountaineering?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>The main types are trekking or hillwalking, rock climbing, ice climbing, alpine
+                            climbing (mixed rock, snow and ice on high peaks) and high-altitude expedition
+                            climbing on the world's biggest mountains. Climbs can also be done in "expedition
+                            style" with fixed camps, or the faster, lighter "alpine style".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">04</span>
+                        <span class="faq-q-text">What skills are required for mountain climbing?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Climbers need good fitness and stamina, navigation with a map and compass, rope work
+                            and knots, belaying, walking with crampons, using an ice axe to stop a fall, basic
+                            first aid, and the ability to read the weather and make safe decisions as a team.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">05</span>
+                        <span class="faq-q-text">What are the major hazards of mountaineering?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>The biggest dangers are avalanches, falling rocks and ice, hidden crevasses, sudden
+                            storms, extreme cold and frostbite, and altitude sickness. Tiredness and poor
+                            decisions near the summit also cause many accidents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">06</span>
+                        <span class="faq-q-text">How can climbers prepare for high-altitude expeditions?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Preparation starts months ahead with cardio and strength training and practice
+                            climbs on smaller peaks. On the mountain, climbers acclimatise slowly by going higher
+                            during the day and sleeping lower ("climb high, sleep low"), drink plenty of water and
+                            learn the warning signs of altitude sickness.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">07</span>
+                        <span class="faq-q-text">What is the difference between trekking and mountaineering?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Trekking means walking long distances on trails through mountain areas, usually
+                            without special climbing gear. Mountaineering means actually climbing up a mountain,
+                            often on steep rock, snow or ice, using ropes, crampons and ice axes and needing more
+                            technical skill.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">08</span>
+                        <span class="faq-q-text">How can I join a mountaineering club?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Look for an alpine or mountaineering club in your city, country or university, or ask
+                            at a local climbing wall or outdoor shop. Most clubs welcome beginners, organise group
+                            trips and run training courses. You usually fill in a membership form and pay a small
+                            yearly fee.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">09</span>
+                        <span class="faq-q-text">Which are the highest mountains in the world?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>The five highest are Mount Everest (8,849 m), K2 (8,611 m), Kangchenjunga (8,586 m),
+                            Lhotse (8,516 m) and Makalu (8,485 m). All fourteen mountains above 8,000 metres are in
+                            the Himalaya and Karakoram ranges of Asia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        <span class="faq-num">10</span>
+                        <span class="faq-q-text">What safety precautions should climbers follow?</span>
+                        <span class="faq-toggle" aria-hidden="true"><span></span><span></span></span>
+                    </button>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">
+                            <p>Always check the weather, tell someone your route and return time, and never climb
+                            alone. Carry the right gear and a first-aid kit, wear a helmet, stay roped up on
+                            glaciers, go up slowly to avoid altitude sickness, and be ready to turn back if
+                            conditions become unsafe.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- shown by script.js when the search finds nothing -->
+            <p class="faq-empty" id="faqEmpty" hidden>&#127956;&#65039; No question matches your search. Try another word.</p>
+
+            <!-- still need help? -->
+            <div class="faq-help">
+                <h2>Still have questions?</h2>
+                <p>Our team is happy to help. Send us a message and we will get back to you.</p>
+                <a href="contact.html" class="btn faq-help-btn">Contact Us <span>&rarr;</span></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <h3>ALPINE <span>ASCENTS</span></h3>
+                <p>An academic website about mountaineering, famous peaks, climbing skills and mountain safety.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Alpine Ascents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== DARK / LIGHT MODE SWITCH (with a hint bubble above it) ========== -->
+    <div class="theme-wrap" id="themeWrap">
+        <div class="theme-tip" id="themeTip" role="status">
+            <span class="theme-tip-dot"></span>
+            <span id="themeTipText">Try dark mode &#127769;</span>
+            <button class="theme-tip-close" id="themeTipClose" type="button" aria-label="Hide this tip">&times;</button>
+        </div>
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <span class="toggle-stars"></span>
+            <span class="toggle-cloud"></span>
+            <span class="toggle-knob"></span>
+        </button>
+    </div>
+
+    <!-- ========== LOGO POPUP (opens when the logo is clicked) ========== -->
+    <div class="logo-popup" id="logoPopup">
+        <span class="logo-close" id="logoClose">&times;</span>
+        <div class="logo-stage">
+            <span class="logo-ring"></span>
+            <span class="logo-ring ring2"></span>
+            <span class="logo-ring ring3"></span>
+            <img id="logoBig" class="logo-big" src="aa-logo.svg" alt="Alpine Ascents logo">
+            <p class="logo-name">ALPINE <span>ASCENTS</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
