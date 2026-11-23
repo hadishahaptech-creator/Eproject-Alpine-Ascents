@@ -1,1 +1,874 @@
- <h1>we are learning github</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Alpine Ascents - an academic project about mountains, climbing and adventure."
+    />
+    <title>Home | Alpine Ascents</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <img class="preloader-logo" src="aa-logo.svg" alt="Alpine Ascents" />
+        <p class="preloader-name">ALPINE <span>ASCENTS</span></p>
+        <div class="preloader-bar"><span></span></div>
+      </div>
+    </div>
+
+    <div class="scroll-bar" id="scrollBar"></div>
+
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="aa-logo.svg"
+            alt="Alpine Ascents logo"
+            class="logo-img"
+            title="Click to view the logo"
+            style="cursor: pointer"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="logo-text">ALPINE <span>ASCENTS</span></span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          &#9776;
+        </button>
+
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="visitor-badge" title="Demo visitor counter">
+          <span class="visitor-icon">&#128065;</span>
+          <span class="visitor-label">Visitors:</span>
+          <span class="visitor-number" id="visitorCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-slides">
+        <div
+          class="hero-slide active"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1544198365-f5d60b6d8190?auto=format&fit=crop&w=2000&q=85&quot;);
+          "
+        ></div>
+
+        <div class="hero-slide hero-video-slide" data-time="3000">
+          <video
+            muted
+            playsinline
+            loop
+            preload="auto"
+            poster="https://cdn.pixabay.com/video/2025/05/06/277097_large.jpg"
+          >
+            <source
+              src="https://cdn.pixabay.com/video/2025/05/06/277097_medium.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=85&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=85&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=2000&q=85&quot;);
+          "
+        ></div>
+
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=2000&q=85&quot;);
+          "
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>A BEGINNER'S GUIDE TO MOUNTAINEERING</h1>
+        <p>
+          Everything we learned about climbing, famous peaks and staying safe,
+          in one place.
+        </p>
+      </div>
+
+      <button
+        class="hero-arrow hero-prev"
+        id="heroPrev"
+        type="button"
+        aria-label="Previous picture"
+      >
+        &#10094;
+      </button>
+      <button
+        class="hero-arrow hero-next"
+        id="heroNext"
+        type="button"
+        aria-label="Next picture"
+      >
+        &#10095;
+      </button>
+
+      <div class="hero-dots">
+        <button
+          class="hero-dot active"
+          type="button"
+          aria-label="Show picture 1"
+        ></button>
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show the video"
+          style="--slide-time: 3s"
+        ></button>
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show picture 3"
+        ></button>
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show picture 4"
+        ></button>
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show picture 5"
+        ></button>
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show picture 6"
+        ></button>
+      </div>
+    </section>
+
+    <section class="welcome section">
+      <div class="container welcome-inner">
+        <div class="welcome-text">
+          <h2 class="section-title left">Welcome to Alpine Ascents</h2>
+          <p>
+            We started this website because we wanted to understand
+            mountaineering properly. For some people it means a long walk up to
+            a viewpoint. For others it means weeks on snow and ice, trying to
+            reach the top of a famous peak. Either way, it takes you to places
+            very few people ever get to see.
+          </p>
+          <p>
+            While reading about it, one thing kept coming up: climbing is hard.
+            You need strength, patience and a lot of preparation to deal with
+            steep slopes, thin air and sudden changes in the weather. But almost
+            every climber says the view from the top makes it all worth it.
+          </p>
+          <p>
+            The part we found most important is <strong>safety</strong>. Good
+            planning, the right gear, proper training and respect for the
+            mountain are what bring climbers home again. So on this site we have
+            put together the basics, a few famous mountains and the skills every
+            beginner should know.
+          </p>
+        </div>
+        <div class="welcome-img">
+          <img
+            src="https://images.unsplash.com/photo-1708355606076-fb22f9ed235d?auto=format&fit=crop&w=900&q=80"
+            alt="Golden Himalayan peaks rising above the clouds"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="explore section" id="explore">
+      <div class="container">
+        <h2 class="section-title">Things Every Beginner Should Know</h2>
+        <p class="section-intro">
+          These are the topics we think you should read about first. Click any
+          card to see more.
+        </p>
+
+        <div class="explore-controls">
+          <div class="filter-bar" id="filterBar">
+            <span class="filter-indicator" id="filterIndicator"></span>
+            <button class="filter-btn active" data-filter="all">
+              All <span class="count"></span>
+            </button>
+            <button class="filter-btn" data-filter="basics">
+              Basics <span class="count"></span>
+            </button>
+            <button class="filter-btn" data-filter="skills">
+              Skills <span class="count"></span>
+            </button>
+            <button class="filter-btn" data-filter="gear">
+              Gear <span class="count"></span>
+            </button>
+            <button class="filter-btn" data-filter="safety">
+              Safety <span class="count"></span>
+            </button>
+          </div>
+
+          <label class="explore-search">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="16.5"
+                y1="16.5"
+                x2="21"
+                y2="21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              type="search"
+              class="explore-search-input"
+              id="exploreSearch"
+              placeholder="Search topics..."
+              aria-label="Search topics"
+            />
+          </label>
+        </div>
+
+        <div class="card-grid filter-grid" id="exploreGrid">
+          <article class="card" data-category="basics" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=600&q=80"
+              alt="Snowy Himalayan peak Ama Dablam"
+            />
+            <div class="card-body">
+              <span class="card-tag">Basics</span>
+              <h3>History of Mountaineering</h3>
+              <p>
+                From the first ascent of Mont Blanc in 1786 to Everest in 1953,
+                see how climbing grew into a worldwide sport.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                Modern mountaineering began in 1786, when Jacques Balmat and
+                Michel-Gabriel Paccard reached the top of Mont Blanc in the
+                Alps. The 1800s became the "Golden Age of Alpinism", when most
+                big Alpine peaks were climbed for the first time. In the 1900s,
+                climbers turned to the giants of the Himalaya and Karakoram.
+              </p>
+              <ul>
+                <li>
+                  <strong>1786:</strong> first ascent of Mont Blanc, the start
+                  of modern mountaineering.
+                </li>
+                <li>
+                  <strong>1865:</strong> Edward Whymper's team reaches the top
+                  of the Matterhorn.
+                </li>
+                <li>
+                  <strong>1950:</strong> Annapurna becomes the first 8,000 m
+                  peak to be climbed.
+                </li>
+                <li>
+                  <strong>1953:</strong> Edmund Hillary and Tenzing Norgay stand
+                  on top of Mount Everest.
+                </li>
+                <li>
+                  <strong>1954:</strong> an Italian expedition makes the first
+                  ascent of K2.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Did you know?</strong> There are 14 mountains higher
+                than 8,000 m, and all of them are in Asia.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="basics" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80"
+              alt="Hikers walking on a mountain trail"
+            />
+            <div class="card-body">
+              <span class="card-tag">Basics</span>
+              <h3>Types and Styles</h3>
+              <p>
+                Trekking, rock climbing, ice climbing and alpine style - each
+                one needs different skills and gear.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                Mountaineering covers many activities, from gentle hill walking
+                to technical climbs on the highest peaks in the world. Most
+                climbers start with trekking and slowly learn the harder styles.
+              </p>
+              <ul>
+                <li>
+                  <strong>Trekking:</strong> walking long trails through
+                  mountain areas, with no special climbing gear.
+                </li>
+                <li>
+                  <strong>Rock climbing:</strong> climbing steep rock with
+                  hands, feet and a rope for safety.
+                </li>
+                <li>
+                  <strong>Ice climbing:</strong> climbing frozen waterfalls and
+                  ice using ice axes and crampons.
+                </li>
+                <li>
+                  <strong>Alpine style:</strong> a small team carries everything
+                  and climbs fast, without fixed camps.
+                </li>
+                <li>
+                  <strong>Expedition style:</strong> a big team with fixed ropes
+                  and several camps, common on 8,000 m peaks.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Tip:</strong> beginners should start with guided treks
+                before trying technical climbs.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="skills" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1601224748193-d24f166b5c77?auto=format&fit=crop&w=600&q=80"
+              alt="Climber using rope technique on a rock wall"
+            />
+            <div class="card-body">
+              <span class="card-tag">Skills</span>
+              <h3>Climbing Techniques</h3>
+              <p>
+                Basic rope work, belaying, using crampons and ice axes, and
+                moving safely on steep ground.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                Good technique saves energy and keeps climbers safe. These
+                skills are learned step by step, best with an experienced
+                teacher or a climbing club.
+              </p>
+              <ul>
+                <li>
+                  <strong>Belaying:</strong> controlling the rope for a partner
+                  so that a fall is stopped quickly.
+                </li>
+                <li>
+                  <strong>Knots:</strong> the figure-eight knot is used to tie
+                  the rope to the harness.
+                </li>
+                <li>
+                  <strong>Crampon technique:</strong> flat feet on gentle snow,
+                  front points on steep ice.
+                </li>
+                <li>
+                  <strong>Self-arrest:</strong> using the ice axe to stop
+                  yourself sliding down a snow slope.
+                </li>
+                <li>
+                  <strong>Rope teams:</strong> climbing roped together on
+                  glaciers in case someone falls into a crevasse.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Tip:</strong> practise self-arrest on a safe, gentle
+                slope before you ever need it.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="skills" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1489575399610-e9a20b205184?auto=format&fit=crop&w=600&q=80"
+              alt="Snowy peaks in cloud and changing weather"
+            />
+            <div class="card-body">
+              <span class="card-tag">Skills</span>
+              <h3>Navigation and Weather</h3>
+              <p>
+                Reading a map, using a compass and understanding mountain
+                weather before it turns dangerous.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                In the mountains, knowing where you are and what the weather
+                will do is just as important as being fit. Weather can change in
+                minutes, and clouds can hide the path completely.
+              </p>
+              <ul>
+                <li>
+                  <strong>Map and compass:</strong> every climber should be able
+                  to find the way without a phone.
+                </li>
+                <li>
+                  <strong>GPS and offline maps:</strong> useful backups - keep
+                  the batteries warm in cold weather.
+                </li>
+                <li>
+                  <strong>Weather forecasts:</strong> check them before the trip
+                  and again during the climb.
+                </li>
+                <li>
+                  <strong>Turnaround time:</strong> choose a time to turn back,
+                  even if the summit looks close.
+                </li>
+                <li>
+                  <strong>Whiteout:</strong> in thick cloud or snow, stop, stay
+                  together and move carefully.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Did you know?</strong> Temperature usually drops by
+                about 6.5 &deg;C for every 1,000 m you climb.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="gear" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1516592673884-4a382d1124c2?auto=format&fit=crop&w=600&q=80"
+              alt="Climbing rope and carabiner on rock"
+            />
+            <div class="card-body">
+              <span class="card-tag">Gear</span>
+              <h3>Gear and Equipment</h3>
+              <p>
+                Boots, layers, helmet, harness, rope, ice axe and crampons - the
+                kit that keeps climbers safe.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                The right gear makes climbing safer and more comfortable. Good
+                equipment does not need to be the most expensive - it needs to
+                fit well and suit the climb.
+              </p>
+              <ul>
+                <li>
+                  <strong>Boots:</strong> stiff, waterproof boots that crampons
+                  can be fixed to.
+                </li>
+                <li>
+                  <strong>Layers:</strong> a base layer, a warm fleece or down
+                  jacket, and a waterproof shell.
+                </li>
+                <li>
+                  <strong>Technical gear:</strong> helmet, harness, rope,
+                  carabiners, ice axe and crampons.
+                </li>
+                <li>
+                  <strong>Light and navigation:</strong> map, compass and a
+                  headlamp with spare batteries.
+                </li>
+                <li>
+                  <strong>Essentials:</strong> first-aid kit, sunglasses,
+                  sunscreen, water and high-energy food.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Tip:</strong> test all new gear on short, easy walks
+                before a big climb.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="gear" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80"
+              alt="View from inside a tent while camping"
+            />
+            <div class="card-body">
+              <span class="card-tag">Gear</span>
+              <h3>Sheltering and Camping</h3>
+              <p>
+                How climbers set up base camps, choose safe tent spots and stay
+                warm in cold conditions.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                On long climbs, the camp is where climbers rest, eat and
+                recover. A good camp can make the difference between a
+                successful climb and turning back early.
+              </p>
+              <ul>
+                <li>
+                  <strong>Base camp:</strong> the main camp at the foot of the
+                  mountain, with most of the supplies.
+                </li>
+                <li>
+                  <strong>High camps:</strong> smaller camps higher up, used for
+                  the final push to the summit.
+                </li>
+                <li>
+                  <strong>Choosing a spot:</strong> flat ground, away from
+                  avalanche paths and falling rocks.
+                </li>
+                <li>
+                  <strong>Staying warm:</strong> a four-season tent, an
+                  insulated sleeping mat and a warm sleeping bag.
+                </li>
+                <li>
+                  <strong>Water:</strong> melt snow on a stove and drink plenty,
+                  even when you are not thirsty.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Tip:</strong> keep tomorrow's water bottle inside your
+                sleeping bag so it does not freeze.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="safety" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80"
+              alt="Snowy Ama Dablam peak with clouds"
+            />
+            <div class="card-body">
+              <span class="card-tag">Safety</span>
+              <h3>Mountain Hazards and Safety</h3>
+              <p>
+                Avalanches, storms, rockfall and crevasses - and the simple
+                steps to avoid them.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                Mountains are beautiful but they can be dangerous. Knowing the
+                main hazards is the first step to avoiding them.
+              </p>
+              <ul>
+                <li>
+                  <strong>Avalanches:</strong> stay off steep snow slopes,
+                  especially after heavy snowfall.
+                </li>
+                <li>
+                  <strong>Crevasses:</strong> hidden cracks in glaciers - always
+                  travel roped together.
+                </li>
+                <li>
+                  <strong>Rockfall:</strong> wear a helmet and move quickly
+                  through risky areas.
+                </li>
+                <li>
+                  <strong>Storms and cold:</strong> check the forecast and watch
+                  for frostbite and hypothermia.
+                </li>
+                <li>
+                  <strong>Tell someone:</strong> always share your route and the
+                  time you plan to be back.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Golden rule:</strong> the summit is optional - getting
+                home safely is not.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" data-category="safety" tabindex="0">
+            <img
+              src="https://images.unsplash.com/photo-1549536392-497c31e9139a?auto=format&fit=crop&w=600&q=80"
+              alt="Mountaineer climbing a high snowy slope"
+            />
+            <div class="card-body">
+              <span class="card-tag">Safety</span>
+              <h3>Altitude and Acclimatization</h3>
+              <p>
+                Why the air gets thin up high, what altitude sickness is, and
+                how climbers adjust slowly.
+              </p>
+              <button class="read-more" type="button">Read More &rarr;</button>
+            </div>
+            <div class="card-details">
+              <p>
+                The higher you go, the less oxygen there is in each breath. The
+                body can adapt, but only if it is given enough time. This slow
+                adjustment is called acclimatization.
+              </p>
+              <ul>
+                <li>
+                  <strong>Altitude sickness:</strong> headache, nausea and
+                  tiredness, often starting above about 2,500 m.
+                </li>
+                <li>
+                  <strong>Climb high, sleep low:</strong> go higher during the
+                  day and come down to sleep.
+                </li>
+                <li>
+                  <strong>Go slowly:</strong> above 3,000 m, a common rule is to
+                  sleep only 300-500 m higher each night.
+                </li>
+                <li>
+                  <strong>Drink and rest:</strong> plenty of water, good food
+                  and rest days help the body adjust.
+                </li>
+                <li>
+                  <strong>Danger signs:</strong> confusion or breathlessness
+                  while resting mean go down right away.
+                </li>
+              </ul>
+              <p class="modal-tip">
+                <strong>Did you know?</strong> At the top of Everest, each
+                breath has only about one third of the oxygen found at sea
+                level.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p class="explore-empty" id="exploreEmpty" hidden>
+          No topics match your search. Try another word.
+        </p>
+      </div>
+    </section>
+
+    <div class="explore-modal" id="exploreModal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div
+        class="modal-box"
+        id="modalBox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <div class="modal-image">
+          <img id="modalImg" alt="" />
+          <span class="modal-tag" id="modalTag"></span>
+        </div>
+        <div class="modal-content">
+          <h2 id="modalTitle"></h2>
+          <div class="modal-text" id="modalText"></div>
+          <div class="modal-nav">
+            <button class="modal-nav-btn" id="modalPrev" type="button">
+              &larr; Previous
+            </button>
+            <span class="modal-count" id="modalCount"></span>
+            <button class="modal-nav-btn" id="modalNext" type="button">
+              Next &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mountains section" id="mountains">
+      <div class="container">
+        <h2 class="section-title">Famous Mountains Around the World</h2>
+        <p class="section-intro">
+          Six peaks almost every climber has heard of (and many dream about).
+        </p>
+
+        <div class="toggle-box">
+          <button class="btn" id="mountainBtn">Show Mountains</button>
+        </div>
+
+        <div class="mountain-grid row g-4 hidden" id="mountainGrid">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+                alt="Mount Everest"
+              />
+              <div class="mountain-info">
+                <h3>Mount Everest</h3>
+                <p>Nepal &bull; 8,849 m</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1627896157734-4d7d4388f28b?auto=format&fit=crop&w=800&q=80"
+                alt="K2 mountain"
+              />
+              <div class="mountain-info">
+                <h3>K2</h3>
+                <p>Pakistan &bull; 8,611 m</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80"
+                alt="Matterhorn mountain"
+              />
+              <div class="mountain-info">
+                <h3>Matterhorn</h3>
+                <p>Switzerland &bull; 4,478 m</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1663418691903-f8acd00bea41?auto=format&fit=crop&w=800&q=80"
+                alt="Nanga Parbat seen from Fairy Meadows"
+              />
+              <div class="mountain-info">
+                <h3>Nanga Parbat</h3>
+                <p>Pakistan &bull; 8,126 m</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1613061445510-e296bfedb73e?auto=format&fit=crop&w=800&q=80"
+                alt="Snow-capped Mount Kilimanjaro above the trees"
+              />
+              <div class="mountain-info">
+                <h3>Kilimanjaro</h3>
+                <p>Tanzania &bull; 5,895 m</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mountain-card">
+              <img
+                src="https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=800&q=80"
+                alt="Mount Fuji with a snowy peak under a clear sky"
+              />
+              <div class="mountain-info">
+                <h3>Mount Fuji</h3>
+                <p>Japan &bull; 3,776 m</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <h3>ALPINE <span>ASCENTS</span></h3>
+          <p>
+            A student website where we share what we learned about
+            mountaineering, famous peaks, climbing skills and mountain safety.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 Alpine Ascents. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="theme-wrap" id="themeWrap">
+      <div class="theme-tip" id="themeTip" role="status">
+        <span class="theme-tip-dot"></span>
+        <span id="themeTipText">Try dark mode &#127769;</span>
+        <button
+          class="theme-tip-close"
+          id="themeTipClose"
+          type="button"
+          aria-label="Hide this tip"
+        >
+          &times;
+        </button>
+      </div>
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Switch to dark mode"
+      >
+        <span class="toggle-stars"></span>
+        <span class="toggle-cloud"></span>
+        <span class="toggle-knob"></span>
+      </button>
+    </div>
+
+    <div class="logo-popup" id="logoPopup">
+      <span class="logo-close" id="logoClose">&times;</span>
+      <div class="logo-stage">
+        <span class="logo-ring"></span>
+        <span class="logo-ring ring2"></span>
+        <span class="logo-ring ring3"></span>
+        <img
+          id="logoBig"
+          class="logo-big"
+          src="aa-logo.svg"
+          alt="Alpine Ascents logo"
+        />
+        <p class="logo-name">ALPINE <span>ASCENTS</span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
