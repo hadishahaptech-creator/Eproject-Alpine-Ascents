@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Alpine Ascents - our mission, our team and our student project.">
+    <title>About Us | Alpine Ascents</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 Grid (rows and columns for the layout; loaded first so our own CSS keeps the design) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+
+    <!-- Stylesheet for this page -->    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- ========== PRELOADER (logo screen when the page opens) ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img class="preloader-logo" src="aa-logo.svg" alt="Alpine Ascents">
+            <p class="preloader-name">ALPINE <span>ASCENTS</span></p>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+    <!-- copper bar at the top that shows how far you have scrolled -->
+    <div class="scroll-bar" id="scrollBar"></div>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="aa-logo.svg" alt="Alpine Ascents logo" class="logo-img" title="Click to view the logo" style="cursor: pointer;" onerror="this.style.display='none'">
+                <span class="logo-text">ALPINE <span>ASCENTS</span></span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE BANNER ========== -->
+    <section class="page-banner">
+        <div class="hero-overlay"></div>
+        <div class="page-banner-content">
+            <h1>About Us</h1>
+            <p>Home &nbsp;/&nbsp; About Us</p>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT OUR WEBSITE (has an opening animation, see script.js) ========== -->
+    <section class="section about-intro">
+        <div class="container welcome-inner">
+            <div class="welcome-text">
+                <h2 class="section-title left">About Alpine Ascents</h2>
+                <p>
+                    Welcome to Alpine Ascents! Our website is created to introduce people to the
+                    exciting world of mountaineering. Our aim is to share knowledge about mountain climbing,
+                    its history, different climbing techniques, famous mountain destinations, safety
+                    precautions and outdoor adventures.
+                </p>
+                <p>
+                    Whether you are a beginner who has never been on a mountain or someone who simply
+                    enjoys reading about great climbs, we hope this website helps you learn something new.
+                </p>
+            </div>
+            <div class="welcome-img">
+                <img src="https://images.unsplash.com/photo-1638271332429-5438dfb5ba54?auto=format&fit=crop&w=800&q=80"
+                     alt="Group of mountaineers climbing a snow covered mountain">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OUR MISSION ========== -->
+    <section class="section mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="mission-box">
+                <p>
+                    Our mission is to spread awareness about mountaineering and to encourage safe
+                    mountain exploration. We want to help visitors understand both the challenges and the
+                    beauty of the mountains - from the hard work it takes to climb them, to the amazing
+                    views and experiences waiting at the top. Above all, we want every reader to remember
+                    that safety and respect for nature always come first.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OUR TEAM (guides) ========== -->
+    <section class="section core-team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-intro">Meet the guides who help you learn about mountains, climbing and staying safe outdoors.</p>
+
+            <!-- Bootstrap grid: "row" + "col-*" classes place the cards (g-4 = space between them) -->
+            <div class="core-team-grid row g-4">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="core-card">
+                        <div class="core-photo">
+                            <img src="https://images.unsplash.com/photo-1638271332429-5438dfb5ba54?auto=format&fit=crop&w=600&q=80" alt="Mountaineers on an expedition route">
+                            <span class="core-avatar">S</span>
+                        </div>
+                        <div class="core-info">
+                            <h3>Shahmeer</h3>
+                            <p class="core-role">Mountain Destinations Guide</p>
+                            <p>Guides visitors about famous mountains, popular climbing routes and the best seasons to visit, so they can plan their own trips with confidence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="core-card">
+                        <div class="core-photo">
+                            <img src="https://images.unsplash.com/photo-1643903096045-07741be1f245?auto=format&fit=crop&w=600&q=80" alt="Climber with crampons on a snowy ridge">
+                            <span class="core-avatar">M</span>
+                        </div>
+                        <div class="core-info">
+                            <h3>Mudasir</h3>
+                            <p class="core-role">Safety Awareness Guide</p>
+                            <p>Shares safety tips, explains common mountain hazards and guides visitors on safe and responsible mountaineering practices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="core-card">
+                        <div class="core-photo">
+                            <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=600&q=80" alt="Himalayan peak Ama Dablam">
+                            <span class="core-avatar">F</span>
+                        </div>
+                        <div class="core-info">
+                            <h3>Faham</h3>
+                            <p class="core-role">Mountaineering Knowledge Guide</p>
+                            <p>Researches mountaineering history and climbing techniques, and turns them into simple, easy-to-understand guides for beginners.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="core-card">
+                        <div class="core-photo">
+                            <img src="https://images.unsplash.com/photo-1516592673884-4a382d1124c2?auto=format&fit=crop&w=600&q=80" alt="Climbing rope and carabiner on rock">
+                            <span class="core-avatar">O</span>
+                        </div>
+                        <div class="core-info">
+                            <h3>Owais</h3>
+                            <p class="core-role">Gear and Equipment Guide</p>
+                            <p>Guides visitors about essential climbing gear, how each piece of equipment is used, and what beginners should carry in the mountains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OUR TECHNICAL TEAM ========== -->
+    <section class="section team">
+        <div class="container">
+            <h2 class="section-title">Our Technical Team</h2>
+            <p class="section-intro">We are a team of four students working together on this mountaineering website project.</p>
+
+            <!-- two buttons to show / hide the technical team cards -->
+            <div class="team-buttons">
+                <button class="btn" id="showTeamBtn">Show Team</button>
+                <button class="btn btn-light" id="hideTeamBtn">Hide Team</button>
+            </div>
+
+            <!-- Bootstrap grid: 2 cards per row on small screens, 4 on large screens
+                 (hidden at first: "Show Team" removes the "hidden" class) -->
+            <div class="team-grid row g-4 hidden" id="techTeam">
+                <div class="col-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="avatar">Z</div>
+                        <h3>Zahid</h3>
+                        <p><span>Age:</span> 16</p>
+                        <p><span>Role:</span> Team Member</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="avatar">H</div>
+                        <h3>Hadi</h3>
+                        <p><span>Age:</span> 17</p>
+                        <p><span>Role:</span> Team Member</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="avatar">A</div>
+                        <h3>Areeb</h3>
+                        <p><span>Age:</span> 17</p>
+                        <p><span>Role:</span> Team Member</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="avatar">A</div>
+                        <h3>Ahmed</h3>
+                        <p><span>Age:</span> 13</p>
+                        <p><span>Role:</span> Team Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <h3>ALPINE <span>ASCENTS</span></h3>
+                <p>An academic website about mountaineering, famous peaks, climbing skills and mountain safety.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Alpine Ascents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== DARK / LIGHT MODE SWITCH (with a hint bubble above it) ========== -->
+    <div class="theme-wrap" id="themeWrap">
+        <div class="theme-tip" id="themeTip" role="status">
+            <span class="theme-tip-dot"></span>
+            <span id="themeTipText">Try dark mode &#127769;</span>
+            <button class="theme-tip-close" id="themeTipClose" type="button" aria-label="Hide this tip">&times;</button>
+        </div>
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <span class="toggle-stars"></span>
+            <span class="toggle-cloud"></span>
+            <span class="toggle-knob"></span>
+        </button>
+    </div>
+
+    <!-- ========== LOGO POPUP (opens when the logo is clicked) ========== -->
+    <div class="logo-popup" id="logoPopup">
+        <span class="logo-close" id="logoClose">&times;</span>
+        <div class="logo-stage">
+            <span class="logo-ring"></span>
+            <span class="logo-ring ring2"></span>
+            <span class="logo-ring ring3"></span>
+            <img id="logoBig" class="logo-big" src="aa-logo.svg" alt="Alpine Ascents logo">
+            <p class="logo-name">ALPINE <span>ASCENTS</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
